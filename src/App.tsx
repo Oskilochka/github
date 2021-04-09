@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {SearchBox} from "./components/search-box/SearchBox";
+import {ReposWrap} from "./components/repos-wrap/ReposWrap";
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <h1>App that search repos in Github by name</h1>
       </header>
+        <div className='content'>
+            <SearchBox />
+           <ReposWrap />
+        </div>
     </div>
   );
 }
