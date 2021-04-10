@@ -1,25 +1,20 @@
-import React, {useEffect, useState} from "react";
-import {githubAPI} from "../../../api/api";
+import React, {FC} from "react";
 
-export const ReposBox = () => {
-    const [repos, setRepos] = useState<any>()
+type PropsType = {
+    name: string,
+    url: string,
+    ownerLogin: string,
+    img: string
+}
 
-    useEffect(() => {
-        githubAPI.getReposByName().then(res => setRepos(res.items))
-    }, [])
+export const ReposBox: FC<PropsType> = ({name, ownerLogin, url, img}) => {
 
     return (
-        <div>
-            {repos
-                ? <div>
-                    {repos.map((obj: any) => (
-                        <div className='repos-box'>
-                            <h1>{obj.name}</h1>
-                        </div>
-                    ))}
-                </div>
-                : null
-            }
+        <div className='repos-box'>
+            <img src={img} className='owner-img'/>
+            <h1>{name}</h1>
+            <h1>{ownerLogin}</h1>
+            <h3> <a href={url}>See at gitHub</a> </h3>
         </div>
     )
 }

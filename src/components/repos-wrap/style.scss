@@ -1,5 +1,18 @@
+.repos-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin: 0px 10px;
+}
+
 .repos-box {
   border: 1px solid black;
-  width: 300px;
-  margin: 5px;
+  width: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.owner-img {
+  max-width: 100px;
+  border-radius: 10px;
 }

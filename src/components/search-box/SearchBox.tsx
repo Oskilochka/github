@@ -1,11 +1,19 @@
-import React from "react";
+import React, {FC} from "react";
 import './style.scss'
 
-export const SearchBox = () => {
+type PropsType = {
+    setInput: any
+}
+
+export const SearchBox: FC<PropsType> = ({setInput}) => {
+    const onInputChange = (e: any) => {
+        e.preventDefault()
+        setInput(e.target.value.toLowerCase())
+    }
+
     return (
         <div className='wrap'>
-            <input placeholder='Write name of repos' />
-            <button>Find</button>
+            <input placeholder='Write name of repos' onChange={onInputChange}/>
         </div>
     )
 }
