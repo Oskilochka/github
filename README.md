@@ -16,3 +16,4 @@ App that search repositories in Github by name
 * Typescript
 * Github API
 * Octokit 
+* @testing-library/react

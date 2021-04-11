@@ -36,7 +36,7 @@ export const Pagination: FC<PropsType> = ({totalReposCount, currentPage, per_pag
     }
 
     return (
-        <div className='pagination'>
+        <div className='pagination' data-testid='pagination'>
             {portionNumber > 1 && (
                 <button onClick={() => prevPage()} className='pagination_btn'>
                     Prev

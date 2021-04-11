@@ -8,13 +8,11 @@ type PropsType = {
 
 export const ReposWrap: FC<PropsType> = ({repos}) => {
     return (
-        <div>
-            <div className='repos-wrap'>
-                {repos.map((obj: any) => (
-                    <ReposBox name={obj.name} ownerLogin={obj.owner.login} url={obj.clone_url}
-                              img={obj.owner.avatar_url}/>
-                ))}
-            </div>
+        <div className='repos-wrap'>
+            {repos.map((obj: any) => (
+                <ReposBox name={obj.name} ownerLogin={obj.owner.login} url={obj.clone_url}
+                          img={obj.owner.avatar_url}/>
+            ))}
         </div>
     )
 }

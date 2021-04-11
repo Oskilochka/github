@@ -6,7 +6,7 @@ type PropsType = {
 }
 
 export const SearchBox: FC<PropsType> = ({setInput}) => {
-    const [value, setValue] = useState()
+    let [value, setValue] = useState()
 
     const onInputChange = (e: any) => {
         e.preventDefault()
@@ -19,8 +19,8 @@ export const SearchBox: FC<PropsType> = ({setInput}) => {
 
     return (
         <div className='search'>
-            <input placeholder='Write name of repos' onChange={onInputChange} className='search_input'/>
-            <button onClick={find} className='search_btn'>Find</button>
+            <input placeholder='Write name of repos' value={value} onChange={onInputChange} className='search_input'/>
+            <button onClick={find} className='search_btn' data-testid='search-button'>Find</button>
         </div>
     )
 }
