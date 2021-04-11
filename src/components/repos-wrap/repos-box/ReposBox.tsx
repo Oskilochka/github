@@ -10,10 +10,10 @@ type PropsType = {
 export const ReposBox: FC<PropsType> = ({name, ownerLogin, url, img}) => {
     return (
         <div className='repos-box'>
-            <img src={img} className='owner-img'/>
-            <h3> {name}</h3>
-            <h4>Owner: {ownerLogin}</h4>
-            <h4><a href={url}>See at gitHub</a></h4>
+            <img src={img} className='repos-box_img'/>
+            <h3 className='repos-box_name'> {name}</h3>
+            <h4><span className='repos-box_owner'>Owner</span>: {ownerLogin}</h4>
+            <h4><a href={url} className='repos-box_link'>See at gitHub</a></h4>
         </div>
     )
 }

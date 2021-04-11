@@ -1,18 +1,40 @@
-.repos-wrap {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  margin: 0px 10px;
+.repos {
+  &-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 30px 20px;
+  }
+
+  &-box {
+    border: 1px solid lightgrey;
+    width: auto;
+    border-radius: 10px;
+    padding: 20px 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+
+    &_name {
+      font-weight: lighter;
+    }
+
+    &_owner {
+      font-style: italic;
+      font-weight: lighter;
+    }
+
+    &_img {
+      max-width: 100px;
+      border-radius: 10px;
+    }
+
+    &_link {
+      text-decoration: none;
+      color: #217674;
+    }
+
+    &_link:hover {
+      color: darkblue;
+    }
+  }
 }
 
-.repos-box {
-  border: 1px solid black;
-  width: auto;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.owner-img {
-  max-width: 100px;
-  border-radius: 10px;
-}

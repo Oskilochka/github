@@ -1,8 +1,12 @@
-import React from "react";
+import React, {FC} from "react";
 import './style.scss'
 import {ReposBox} from "./repos-box/ReposBox";
 
-export const ReposWrap = ({repos}: any) => {
+type PropsType = {
+    repos: Array<object>
+}
+
+export const ReposWrap: FC<PropsType> = ({repos}) => {
     return (
         <div>
             <div className='repos-wrap'>
@@ -12,6 +16,5 @@ export const ReposWrap = ({repos}: any) => {
                 ))}
             </div>
         </div>
-
     )
 }

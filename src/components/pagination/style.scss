@@ -4,23 +4,26 @@
   align-items: center;
 
   button {
-    border: 1px solid darkgray;
     border-radius: 10px;
     cursor: pointer;
     padding: 7px 10px;
     margin: 1px;
+    border: none;
   }
 
   &_btn {
-    background-color: aquamarine;
+    background-color: #d3c0ee;
+    border: 1px solid darkgray;
+
+  }
+
+  &-pageNumber {
+    background-color: #94beb6;
+  }
+
+  &-selectedPage {
+    background-color: #217674;
+    color: white;
   }
 }
 
-.pageNumber {
-  background-color: red;
-}
-
-.selectedPage {
-  background-color: blue;
-
-}

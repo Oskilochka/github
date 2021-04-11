@@ -2,7 +2,7 @@ import React, {FC, useState} from "react";
 import './style.scss'
 
 type PropsType = {
-    setInput: any
+    setInput: (value: any) => void
 }
 
 export const SearchBox: FC<PropsType> = ({setInput}) => {
@@ -14,13 +14,13 @@ export const SearchBox: FC<PropsType> = ({setInput}) => {
     }
 
     const find = () => {
-        setInput(value)
+        value && setInput(value)
     }
 
     return (
-        <div className='wrap'>
-            <input placeholder='Write name of repos'  onChange={onInputChange}/>
-            <button onClick={find}>Find</button>
+        <div className='search'>
+            <input placeholder='Write name of repos' onChange={onInputChange} className='search_input'/>
+            <button onClick={find} className='search_btn'>Find</button>
         </div>
     )
 }

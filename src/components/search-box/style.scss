@@ -1,3 +1,18 @@
-.wrap {
+.search {
   margin: 30px 0px;
+
+  &_btn, &_input {
+    border-radius: 10px;
+    border: 1px solid darkblue;
+    padding: 10px 15px;
+  }
+
+  &_input {
+    outline: none;
+    margin-right: 15px;
+  }
+
+  &_btn {
+    cursor: pointer;
+  }
 }
