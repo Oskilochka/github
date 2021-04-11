@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useState} from "react";
 import './style.scss'
 
 type PropsType = {
@@ -6,14 +6,21 @@ type PropsType = {
 }
 
 export const SearchBox: FC<PropsType> = ({setInput}) => {
+    const [value, setValue] = useState()
+
     const onInputChange = (e: any) => {
         e.preventDefault()
-        setInput(e.target.value.toLowerCase())
+        setValue(e.target.value.toLowerCase())
+    }
+
+    const find = () => {
+        setInput(value)
     }
 
     return (
         <div className='wrap'>
-            <input placeholder='Write name of repos' onChange={onInputChange}/>
+            <input placeholder='Write name of repos'  onChange={onInputChange}/>
+            <button onClick={find}>Find</button>
         </div>
     )
 }

@@ -1,0 +1,26 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    border: 1px solid darkgray;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 7px 10px;
+    margin: 1px;
+  }
+
+  &_btn {
+    background-color: aquamarine;
+  }
+}
+
+.pageNumber {
+  background-color: red;
+}
+
+.selectedPage {
+  background-color: blue;
+
+}

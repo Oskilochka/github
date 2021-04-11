@@ -5,10 +5,12 @@ const octokit = new Octokit({
 });
 
 export const githubAPI = {
-    async getReposByName(inputName: any) {
+    async getReposByName(inputName: string, per_page: number, currentPage: number) {
         const {data} = await octokit.request('GET /search/repositories', {
-            q: inputName ? inputName : 'git',
-            sort: "stars"
+            q: inputName + '+in:name',
+            sort: 'stars',
+            per_page: per_page,
+            page: currentPage,
         })
         return data
     }
